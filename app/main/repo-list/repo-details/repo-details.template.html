@@ -1,0 +1,41 @@
+<div class="container">
+    <h2>{{$ctrl.repoDetails.name}} details</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Property</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>ID:</td>
+            <td>{{$ctrl.repoDetails.id}}</td>
+        </tr>
+        <tr>
+            <td>Language</td>
+            <td>{{$ctrl.repoDetails.language}}</td>
+        </tr>
+        <tr>
+            <td>Forks</td>
+            <td>{{$ctrl.repoDetails.forks}}</td>
+        </tr>
+        <tr>
+            <td>Watchers</td>
+            <td>{{$ctrl.repoDetails.watchers}}</td>
+        </tr>
+        <tr>
+            <td>Created at</td>
+            <td>{{$ctrl.repoDetails.created_at | date: medium}}</td>
+        </tr>
+        <tr>
+            <td>Updated at</td>
+            <td>{{$ctrl.repoDetails.updated_at | date: medium}}</td>
+        </tr>
+        <tr>
+            <td>Pushed at</td>
+            <td>{{$ctrl.repoDetails.pushed_at | date: medium}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
