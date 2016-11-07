@@ -1,3 +1,39 @@
 .div-square img {
     width: 100%;
 }
+
+.repo-details-navbar {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.mr20 {
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+.issues-body {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+.issues-list {
+    margin-top: 12px;
+}
+
+.issues-data {
+    max-width: 300px;
+}
+
+.issues-date {
+    float: right;
+}
+
+.issues-data > .badge {
+    margin-top: 5px;
+}
+
+.badge.followers {
+    background-color: #286090;
+}

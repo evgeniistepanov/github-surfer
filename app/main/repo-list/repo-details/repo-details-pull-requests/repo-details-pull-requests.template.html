@@ -1,0 +1,30 @@
+<div class="row mr20">
+    <div ng-repeat="pullRequest in $ctrl.pullRequests" class="list-group">
+        <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading"><b>{{pullRequest.title}}</b></h4>
+            <p class="list-group-item-text issues-body">{{pullRequest.body}}</p>
+            <ul class="list-group issues-list">
+                <li class="list-group-item issues-data">
+                    <span class="badge">{{pullRequest.id}}</span>
+                    ID
+                </li>
+                <li class="list-group-item issues-data">
+                    <span class="badge">{{pullRequest.number}}</span>
+                    #
+                </li>
+                <li class="list-group-item issues-data">
+                    State:
+                    <span class="issues-date">{{pullRequest.state}}</span>
+                </li>
+                <li class="list-group-item issues-data">
+                    Created date:
+                    <span class="issues-date">{{pullRequest.created_at | date: medium }}</span>
+                </li>
+                <li class="list-group-item issues-data">
+                    Updated date:
+                    <span class="issues-date">{{pullRequest.updated_at | date: medium }}</span>
+                </li>
+            </ul>
+        </a>
+    </div>
+</div>
