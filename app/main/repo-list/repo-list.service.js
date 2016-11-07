@@ -14,8 +14,6 @@ angular.module('gitExplorer').service('repoListService', ['$http', 'settings', f
             url: 'http://google.com'
         }
     ];
-    console.log('init', settings);
-    console.log($http);
 
     repoListService.getAllRepos = function () {
         return $http.get('https://api.github.com/users/' + settings.user + '/repos');

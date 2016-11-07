@@ -9,10 +9,7 @@ angular.module('gitExplorer').component('repoList', {
         });
 
         repoListCtrl.goToDetails = function (repo) {
-            console.log(repo);
-            $state.go('main.repo-details', {name: repo.name});
-            /*$state.go('main.repo-details');
-            */
+            $state.go('main.repo-details.index', {name: repo.name});
         }
     }
 });

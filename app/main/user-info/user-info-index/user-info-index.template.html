@@ -1,0 +1,49 @@
+<div ng-show="$ctrl.userInfo.name" class="text-center pad-top">
+    <h1>User Info</h1>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{$ctrl.userInfo.name}}</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center">
+                    <img alt="User Pic" src="{{$ctrl.userInfo.avatar_url}}" class="img-circle img-responsive">
+                </div>
+                <div class=" col-md-9 col-lg-9 ">
+                    <table class="table table-user-information">
+                        <tr>
+                            <td>Type</td>
+                            <td>{{$ctrl.userInfo.type}}</td>
+                        </tr>
+                        <tr ng-show="$ctrl.userInfo.company">
+                            <td>Company</td>
+                            <td>{{$ctrl.userInfo.company}}</td>
+                        </tr>
+                        <tr ng-show="$ctrl.userInfo.location">
+                            <td>Location</td>
+                            <td>{{$ctrl.userInfo.location}}</td>
+                        </tr>
+                        <tr ng-show="$ctrl.userInfo.blog">
+                            <td>Blog</td>
+                            <td><a href="{{$ctrl.userInfo.blog}}">{{$ctrl.userInfo.blog}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>Joined date</td>
+                            <td>{{$ctrl.userInfo.created_at | date: medium}}</td>
+                        </tr>
+                        <tr>
+                            <td>Public repositories</td>
+                            <td>{{$ctrl.userInfo.public_repos}}</td>
+                        </tr>
+                        <tr>
+                            <td>Followers</td>
+                            <td><a ui-sref="main.user-info.followers"><span class="badge followers">{{$ctrl.userInfo.followers}}</span></a></td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer"></div>
+    </div>
+</div>
